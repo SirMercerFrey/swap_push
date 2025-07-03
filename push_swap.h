@@ -83,5 +83,18 @@ void    push_bit_zero(t_head *pile_a, t_head *pile_b, int i);
 void    radix_third_bit(t_head *pile_a, t_head *pile_b);
 void    radix_classic(t_head *pile_a, t_head *pile_b);
 void    radix_sort(t_head *pile_a, t_head *pile_b);
+void    balsa_medusa(t_head *pile_a, t_head *pile_b);
+void    simple_radix(t_head *pile_a, t_head *pile_b, int i);
+void    movement_one(t_head *pile_a, t_head *pile_b, int i);
+void    push_two_bits_zero_ab(t_head *pile_a, t_head *pile_b, int i);
+void    push_one_bit_zero_ab(t_head *pile_a, t_head *pile_b, int i);
+void    push_back_a(t_head *pile_a, t_head *pile_b);
+void    push_back_b(t_head *pile_a, t_head *pile_b);
+void    empty_reverse_radix(t_head *pile_a, t_head *pile_b, int i);
+void    movement_two(t_head *pile_a, t_head *pile_b, int i);
+int     push_two_bits_one_ba(t_head *pile_a, t_head *pile_b, int i);
+void    push_two_bits_one_ba_bis(t_head *pile_a, t_head *pile_b, int count);
+void    push_two_bits_one_ba_ter(t_head *pile_a, t_head *pile_b, int i);
+void    finition(t_head *pile_a, t_head *pile_b);
 
 #endif

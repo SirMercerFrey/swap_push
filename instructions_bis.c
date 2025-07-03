@@ -25,7 +25,7 @@ void	rotate_a(t_head *pile_a)
 
 void	rotate_b(t_head *pile_b)
 {
-	rotate(pile_b);
+	(rotate(pile_b));
 	printf("rb\n");
 }
 

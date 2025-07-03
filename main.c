@@ -20,6 +20,7 @@ int	main(int argc, char **argv)
 	chunk_sort(pile_a, pile_b);
 //	radeux_sort(pile_a, pile_b);
 //	radix_sort(pile_a, pile_b);
+//	balsa_medusa(pile_a, pile_b);
 //	print_piles(pile_a, pile_b);
 	free_pile(pile_a);
 	free_pile(pile_b);
