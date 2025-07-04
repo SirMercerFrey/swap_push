@@ -35,6 +35,8 @@ void	quick_sort(int *tab, int start, int end)
 {
 	int		pivot_index;
 
+	if (!tab)
+		return ;
 	if (start < end)
 	{
 		pivot_index = partition(tab, start, end);

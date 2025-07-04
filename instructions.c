@@ -1,12 +1,12 @@
 #include "push_swap.h"
 
-void	swap(t_head *pile)
+int	swap(t_head *pile)
 {
 	t_node	*first;
 	t_node	*second;
 
 	if (!pile || pile->size < 2)
-		return ;
+		return (0);
 	first = pile->first;
 	second = first->next;
 	first->next = second->next;
@@ -18,33 +18,33 @@ void	swap(t_head *pile)
 	pile->first = second;
 	if (first->next == NULL)
 		pile->last = first;
+	return (1);
 }
 
 void	swap_a(t_head *pile_a)
 {
-	swap(pile_a);
-	printf("sa\n");
+	if (swap(pile_a))
+		printf("sa\n");
 }
 
 void	swap_b(t_head *pile_b)
 {
-	swap(pile_b);
-	printf("sb\n");
+	if (swap(pile_b))
+		printf("sb\n");
 }
 
 void	swap_both(t_head *pile_a, t_head *pile_b)
 {
-	swap(pile_a);
-	swap(pile_b);
-	printf("ss\n");
+	if (swap(pile_a) && swap(pile_b))
+		printf("ss\n");
 }
 
-void	push(t_head *from, t_head *to)
+int	push(t_head *from, t_head *to)
 {
 	t_node	*node;
 
 	if (!from || from->size == 0)
-		return ;
+		return (0);
 	node = from->first;
 	from->first = node->next;
 	if (from->first)
@@ -60,16 +60,17 @@ void	push(t_head *from, t_head *to)
 	node->prev = NULL;
 	to->first = node;
 	to->size++;
+	return (1);
 }
 
 void	push_a(t_head *pile_b, t_head *pile_a)
 {
-	push(pile_b, pile_a);
-	printf("pa\n");
+	if (push(pile_b, pile_a))
+		printf("pa\n");
 }
 
 void	push_b(t_head *pile_a, t_head *pile_b)
 {
-	push(pile_a, pile_b);
-	printf("pb\n");
+	if (push(pile_a, pile_b))
+		printf("pb\n");
 }
